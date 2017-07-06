@@ -15,7 +15,7 @@ Before you begin we recommend you read about the basic building blocks that asse
 
 ## Dependencies
 
-HiApp use `npm` to manage third-party packages now.
+MeanJSExample use `npm` to manage NodeJS third-party packages now.
 
 Then install all dependencies, in project's root: "/FirstMean/"
 

@@ -5,12 +5,14 @@ A simple and interesting MeanJS, you can read and learn some example here
 
 ## Requirements
 
-Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application: 
+Before you begin we recommend you read about the basic building blocks that assemble a MEAN application: 
 
 * MongoDB : Go through MongoDB Official Website and proceed to its Great Manual, which should help you understand NoSQL and MongoDB better.
 * Express : The best way to understand express is through its Official Website, particularly The Express Guide; you can also go through this StackOverflow Thread for more resources.
 * AngularJS: Angular's Official Website is a great starting point. You can also use Thinkster Popular Guide, and the Egghead Videos.
 * Node.js: Start by going through Node.js Official Website and this StackOverflow Thread, which should get you going with the Node.js platform in no time.
+* Mean.js: In this section you'll learn how to get started with a MEAN.JS application, install all the prerequisites, and initialize your application.
+
 ### Versions
 
 * MongoDB version 2.4.x is supported.

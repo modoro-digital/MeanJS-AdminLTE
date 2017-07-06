@@ -11,7 +11,11 @@ Before you begin we recommend you read about the basic building blocks that asse
 * Express : The best way to understand express is through its Official Website, particularly The Express Guide; you can also go through this StackOverflow Thread for more resources.
 * AngularJS: Angular's Official Website is a great starting point. You can also use Thinkster Popular Guide, and the Egghead Videos.
 * Node.js: Start by going through Node.js Official Website and this StackOverflow Thread, which should get you going with the Node.js platform in no time.
+### Versions
 
+* MongoDB version 2.4.x is supported.
+* Node version 0.12.x is supported.
+* npm version 2.0.x is supported.
 
 ## Dependencies
 

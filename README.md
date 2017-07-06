@@ -46,6 +46,6 @@ $ gulp
 
 ## License
 
-Copyright (c) 2017 Cyber Air Team. MIT Licensed
+Copyright (c) 2017 Cyber Air Team. Apache License
 
 [http://cyberair.vn/]: http://cyberair.vn/

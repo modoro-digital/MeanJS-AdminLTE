@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Mrdevnets</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="mrdevnet in vm.mrdevnets"
+       ui-sref="mrdevnets.view({ mrdevnetId: mrdevnet._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="mrdevnet.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="mrdevnet.user" ng-bind="mrdevnet.user.displayName"></span>
+        <span ng-if="!mrdevnet.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="mrdevnet.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.mrdevnets.$resolved && !vm.mrdevnets.length">
+    No Mrdevnets yet, why don't you <a ui-sref="mrdevnets.create">create one</a>?
+  </div>
+</section>

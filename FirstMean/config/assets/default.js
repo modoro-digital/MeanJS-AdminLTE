@@ -8,12 +8,23 @@ module.exports = {
       css: [
         // bower:css
         'public/lib/bootstrap/dist/css/bootstrap.css',
-        'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-        'public/lib/angular-ui-notification/dist/angular-ui-notification.css'
+        'public/lib/angular-ui-notification/dist/angular-ui-notification.css',
+        'public/lib/AdminLTE/dist/css/AdminLTE.min.css',
+        'public/lib/AdminLTE/dist/css/skins/_all-skins.min.css',
+        // 'public/lib/AdminLTE/plugins/iCheck/flat/blue.css',
+        // 'public/lib/AdminLTE/plugins/morris/morris.css',
+        // 'public/lib/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css',
+        // 'public/lib/AdminLTE/plugins/datepicker/datepicker3.css',
+        // 'public/lib/AdminLTE/plugins/daterangepicker/daterangepicker.css',
+        // 'public/lib/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
+        // 'public/lib/AdminLTE/plugins/iCheck/flat/blue.css',
         // endbower
       ],
       js: [
         // bower:js
+        'public/lib/jquery/dist/jquery.min.js',
+        'public/lib/jquery-ui/jquery-ui.min.js',
+        'public/lib/AdminLTE/dist/js/app.min.js',
         'public/lib/angular/angular.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',

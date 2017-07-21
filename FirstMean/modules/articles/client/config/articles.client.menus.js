@@ -8,7 +8,7 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
-    menuService.addMenuItem('topbar', {
+    menuService.addMenuItem('sidebar', {
       title: 'Articles',
       state: 'articles',
       type: 'dropdown',
@@ -16,7 +16,7 @@
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'articles', {
+    menuService.addSubMenuItem('sidebar', 'articles', {
       title: 'List Articles',
       state: 'articles.list',
       roles: ['*']

@@ -11,7 +11,6 @@
     menuService.addMenuItem('sidebar', {
       title: 'Articles',
       state: 'articles',
-      type: 'dropdown',
       roles: ['*']
     });
 

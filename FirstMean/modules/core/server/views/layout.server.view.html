@@ -45,29 +45,13 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition sidebar-mini skin-green ng-cloak">
+<body class="hold-transition sidebar-mini skin-green ng-cloak fixed">
   <div class="wrapper">
     <header ng-include="'/modules/core/client/views/header.client.view.html'" class="main-header"></header>
     <aside ng-include="'/modules/core/client/views/sidebar.client.view.html'" class="main-sidebar"></aside>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Dashboard
-          <small>Control panel</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Dashboard</li>
-        </ol>
-      </section>
-
-      <!-- Main content -->
-      <section class="content">
-        {{{block "content"}}}
-      </section>
-      <!-- /.content -->
+      {{{block "content"}}}
     </div>
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

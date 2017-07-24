@@ -24,9 +24,9 @@
   <!-- sidebar menu: : style can be found in sidebar.less -->
   <ul class="sidebar-menu">
 
-    <li class="header">MAIN NAVIGATION</li>
+    <li class="header">MANAGEMENT</li>
     <li ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-if="item.shouldRender(vm.authentication.user);"  ui-sref-active="active" class="{{item.class}} treeview">
-      <a href="#">
+      <a href="#" ui-sref="{{item.state}}({{item.params}})">
         <i ng-class="item.icon || 'fa-circle-o' " class="fa"></i>
         <span ng-bind="item.title"></span>
         <span class="pull-right-container" ng-if="item.items.length>0">

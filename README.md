@@ -1,4 +1,4 @@
-# MeanJSExample
+# MeanJS - AdminLTE Template
 =====
 
 A simple and interesting MeanJS, you can read and learn some example here

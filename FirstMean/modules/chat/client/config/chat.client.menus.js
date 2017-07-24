@@ -13,5 +13,10 @@
       title: 'Chat',
       state: 'chat'
     });
+
+    menuService.addSubMenuItem('sidebar','chat', {
+      title: 'Chat box',
+      state: 'chat'
+    });
   }
 }());

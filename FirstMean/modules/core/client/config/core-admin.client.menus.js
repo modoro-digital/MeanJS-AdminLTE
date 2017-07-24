@@ -11,7 +11,8 @@
     menuService.addMenuItem('sidebar', {
       title: 'Admin',
       state: 'admin',
-      roles: ['admin']
+      roles: ['admin'],
+      type: 'dropdown'
     });
   }
 }());

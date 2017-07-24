@@ -26,7 +26,6 @@
     $logProvider.debugEnabled(app.applicationEnvironment !== 'production');
   }
 
-
   // Then define the init function for starting up the application
   angular.element(document).ready(init);
 

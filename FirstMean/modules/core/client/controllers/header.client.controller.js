@@ -11,5 +11,8 @@
     var vm = this;
     vm.accountMenu = menuService.getMenu('account').items[0];
     vm.authentication = Authentication;
+    vm.signOut = function () {
+      window.location.href  = '/api/auth/signout';
+    }
   }
 }());

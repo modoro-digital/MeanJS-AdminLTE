@@ -45,22 +45,8 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition sidebar-mini skin-green ng-cloak fixed">
-  <div class="wrapper">
-    <header ng-include="'/modules/core/client/views/header.client.view.html'" class="main-header"></header>
-    <aside ng-include="'/modules/core/client/views/sidebar.client.view.html'" class="main-sidebar"></aside>
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      {{{block "content"}}}
-    </div>
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.8
-      </div>
-      <strong>Modified By <a href="http://cyberair.vn">Cyber Air</a>.</strong>
-    </footer>
-  </div>
-
+<body class="hold-transition {{{ bodyClass }}}">
+  {{{block "content"}}}
   <noscript>
     <style>
       [ng\:cloak], [ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -74,7 +60,6 @@
 
   <!--Embedding The User Object-->
   <script type="text/javascript">
-    var user = {{{ user }}};
     var env = "{{ env }}";
   </script>
 

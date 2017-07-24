@@ -22,12 +22,18 @@ exports.renderIndex = function (req, res) {
       firstName: validator.escape(req.user.firstName),
       additionalProvidersData: req.user.additionalProvidersData
     };
-  }
 
-  res.render('modules/core/server/views/index', {
-    user: JSON.stringify(safeUserObject),
-    sharedConfig: JSON.stringify(config.shared)
-  });
+    res.render('modules/core/server/views/index', {
+      user: JSON.stringify(safeUserObject),
+      sharedConfig: JSON.stringify(config.shared),
+      bodyClass : 'sidebar-mini skin-green ng-cloak fixed'
+    });
+  }else {
+    res.render('modules/core/server/views/authentication', {
+      sharedConfig: JSON.stringify(config.shared),
+      bodyClass: 'login-page'
+    });
+  }
 };
 
 /**

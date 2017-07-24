@@ -1,5 +1,21 @@
 {{!< layout}}
-
 {{#contentFor 'content'}}
-  <section ui-view></section>
+<div class="wrapper">
+  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="main-header"></header>
+  <aside ng-include="'/modules/core/client/views/sidebar.client.view.html'" class="main-sidebar"></aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <section ui-view></section>
+  </div>
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.3.8
+    </div>
+    <strong>Modified By <a href="http://cyberair.vn">Cyber Air</a>.</strong>
+  </footer>
+</div>
+<!--Embedding The User Object-->
+<script type="text/javascript">
+  var user = {{{ user }}};
+</script>
 {{/contentFor}}

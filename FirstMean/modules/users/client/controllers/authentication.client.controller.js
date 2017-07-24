@@ -70,7 +70,7 @@
       vm.authentication.user = response;
       Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Signup successful!' });
       // And redirect to the previous or home page
-      $state.go($state.previous.state.name || 'home', $state.previous.params);
+      $window.location.href = $state.href($state.previous.state.name || 'home', $state.previous.params);
     }
 
     function onUserSignupError(response) {
@@ -82,7 +82,7 @@
       vm.authentication.user = response;
       Notification.info({ message: 'Welcome ' + response.firstName });
       // And redirect to the previous or home page
-      $state.go($state.previous.state.name || 'home', $state.previous.params);
+      $window.location.href = $state.href($state.previous.state.name || 'home', $state.previous.params);
     }
 
     function onUserSigninError(response) {

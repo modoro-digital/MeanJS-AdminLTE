@@ -1,22 +1,17 @@
-<section>
-  <div class="page-header">
-    <div class="row">
-      <div class="col-md-6">
-        <h1 ng-bind="vm.user.username"></h1>
-      </div>
-      <div class="col-md-4">
-        <a class="btn btn-primary" ui-sref="admin.user-edit({userId: vm.user._id})">
+<section class="content">
+  <div class="box box-success">
+    <div class="box-header with-border">
+      <h3 class="box-title" ng-bind="vm.user.username"></h3>
+      <div class="pull-right box-tools">
+        <a class="btn btn-primary btn-sm" ui-sref="admin.user-edit({userId: vm.user._id})">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
-        <a class="btn btn-primary" ng-click="vm.remove()" ng-if="!vm.isContextUserSelf()">
+        <a class="btn btn-danger btn-sm" ng-click="vm.remove()" ng-if="!vm.isContextUserSelf()">
           <i class="glyphicon glyphicon-trash"></i>
         </a>
       </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8">
+    <div class="box-body">
       <div class="row">
         <div class="col-md-3"><strong>First Name</strong></div>
         <div class="col-md-6" ng-bind="vm.user.firstName"></div>

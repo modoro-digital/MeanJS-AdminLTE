@@ -131,7 +131,7 @@
       };
 
       // Adding the topbar menu
-      addMenu('topbar', {
+      addMenu('sidebar', {
         roles: ['*']
       });
     }

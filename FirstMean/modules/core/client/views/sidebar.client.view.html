@@ -1,0 +1,44 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar" ng-controller="SidebarController as vm">
+  <!-- Sidebar user panel -->
+  <div class="user-panel">
+    <div class="pull-left image">
+      <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="img-circle">
+    </div>
+    <div class="pull-left info">
+      <p ng-bind="vm.authentication.user.displayName"></p>
+      <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+    </div>
+  </div>
+  <!-- search form -->
+  <form action="#" method="get" class="sidebar-form">
+    <div class="input-group">
+      <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+    </div>
+  </form>
+  <!-- /.search form -->
+  <!-- sidebar menu: : style can be found in sidebar.less -->
+  <ul class="sidebar-menu">
+
+    <li class="header">MANAGEMENT</li>
+    <li ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-if="item.shouldRender(vm.authentication.user);"  ui-sref-active="active" class="{{item.class}} treeview">
+      <a href="#" >
+        <i ng-class="item.icon || 'fa-circle-o' " class="fa"></i>
+        <span ng-bind="item.title"></span>
+        <span class="pull-right-container" ng-if="item.items.length>0">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu" ng-if="item.items.length>0">
+        <li ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(vm.authentication.user);">
+          <a ui-sref="{{subitem.state}}({{subitem.params}})" ><i class="fa fa-circle-o"></i> <span ng-bind="subitem.title"></span></a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<!-- /.sidebar -->

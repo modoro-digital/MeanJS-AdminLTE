@@ -9,7 +9,7 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(Menus) {
-    Menus.addSubMenuItem('topbar', 'admin', {
+    Menus.addSubMenuItem('sidebar', 'admin', {
       title: 'Manage Articles',
       state: 'admin.articles.list'
     });

@@ -8,11 +8,11 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
-    menuService.addMenuItem('topbar', {
+    menuService.addMenuItem('sidebar', {
       title: 'Admin',
       state: 'admin',
-      type: 'dropdown',
-      roles: ['admin']
+      roles: ['admin'],
+      type: 'dropdown'
     });
   }
 }());

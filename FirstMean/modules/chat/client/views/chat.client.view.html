@@ -1,29 +1,45 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Chat Box
+    <small>Chat Example</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Chat</li>
+  </ol>
+</section>
+
 <!-- The chat view -->
-<section class="container">
-  <div class="page-header">
-    <h1>Chat Example</h1>
-  </div>
-  <!-- The message form -->
-  <form class="col-xs-12 col-md-offset-4 col-md-4" ng-submit="vm.sendMessage();">
-    <fieldset class="row">
-      <div class="input-group">
-        <input type="text" id="messageText" name="messageText" class="form-control" ng-model="vm.messageText" placeholder="Enter new message" autofocus>
+<section class="content">
+  <div class="box box-success">
+    <div class="box-header with-border">
+      <h3 class="box-title">Start chat</h3>
+    </div>
+    <div class="box-body">
+      <!-- The message form -->
+      <form class="col-xs-12 col-md-offset-4 col-md-4" ng-submit="vm.sendMessage();">
+        <fieldset class="row">
+          <div class="input-group">
+            <input type="text" id="messageText" name="messageText" class="form-control" ng-model="vm.messageText" placeholder="Enter new message" autofocus>
         <span class="input-group-btn">
           <button type="submit" class="btn btn-primary" ng-disabled="!vm.messageText.length">Submit</button>
         </span>
-      </div>
-    </fieldset>
-  </form>
-  <ul class="list-unstyled">
-    <!-- List all messages -->
-    <li class="col-xs-12 col-md-offset-4 col-md-4 chat-message" ng-repeat="message in vm.messages">
-      <small class="pull-right text-muted" ng-bind="message.created | date:'mediumTime'"></small>
-      <img ng-src="/{{message.profileImageURL}}" alt="{{message.username}}" class="pull-left chat-profile-image" />
-      <div class="pull-left chat-message-details">
-        <strong ng-bind="message.username"></strong>
-        <br>
-        <span ng-bind="message.text"></span>
-      </div>
-    </li>
-  </ul>
+          </div>
+        </fieldset>
+      </form>
+      <ul class="list-unstyled">
+        <!-- List all messages -->
+        <li class="col-xs-12 col-md-offset-4 col-md-4 chat-message" ng-repeat="message in vm.messages">
+          <small class="pull-right text-muted" ng-bind="message.created | date:'mediumTime'"></small>
+          <img ng-src="/{{message.profileImageURL}}" alt="{{message.username}}" class="pull-left chat-profile-image" />
+          <div class="pull-left chat-message-details">
+            <strong ng-bind="message.username"></strong>
+            <br>
+            <span ng-bind="message.text"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>

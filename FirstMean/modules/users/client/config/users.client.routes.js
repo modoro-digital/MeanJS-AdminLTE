@@ -85,7 +85,7 @@
       .state('password', {
         abstract: true,
         url: '/password',
-        template: '<ui-view/>'
+        templateUrl: '/modules/users/client/views/password/password.client.view.html'
       })
       .state('password.forgot', {
         url: '/forgot',

@@ -28,6 +28,7 @@ module.exports = {
         'public/lib/AdminLTE/plugins/iCheck/icheck.min.js',
         'public/lib/AdminLTE/dist/js/app.min.js',
         'public/lib/angular/angular.js',
+        'public/lib/ckeditor/ckeditor.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/ng-file-upload/ng-file-upload.js',

@@ -25,7 +25,9 @@
           <span ng-if="!vm.article.user">Deleted User</span>
         </em>
       </small>
-      <p class="lead" ng-bind="vm.article.content"></p>
+      <div style="padding: 20px" 
+      ng-bind-html="vm.deliberatelyTrustDangerousSnippet()">
+      </div>
     </div>
   </div>
 </section>

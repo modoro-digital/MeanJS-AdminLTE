@@ -1,0 +1,39 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Article
+    <small>Article detail</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Article</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="box box-success">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{vm.article._id ? vm.article.title : 'New Article'}}</h3>
+      <div class="pull-right box-tools" ng-if="!vm.inline">
+        <button type="button" ng-if="vm.article._id" class="btn btn-primary btn-sm" title="Remove" ng-click="vm.editor()">
+          <i class="glyphicon glyphicon-pencil"></i>
+        </button>
+        <button type="button" ng-if="vm.article._id" class="btn btn-danger btn-sm" title="Remove" ng-click="vm.remove()">
+          <i class="glyphicon glyphicon-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="box-body">
+      <div id="editor2" contenteditable="{{vm.inline}}" style="padding: 20px" 
+      ng-bind-html="vm.deliberatelyTrustDangerousSnippet()">
+      </div>
+      <div style="margin-top: 10px; text-align: right">
+        <button type="button" ng-if="vm.inline" class="btn btn-primary btn-sm" ng-click="vm.save()">
+          update
+        </button>
+        <button type="button" ng-if="vm.inline" class="btn btn-danger btn-sm" 
+        ng-click="vm.close()">
+          close
+        </button>
+      </div>
+    </div>
+</section>

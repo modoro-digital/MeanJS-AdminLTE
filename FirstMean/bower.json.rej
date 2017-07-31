@@ -1,0 +1,12 @@
+diff a/FirstMean/bower.json b/FirstMean/bower.json	(rejected hunks)
+@@ -1,7 +1,7 @@
+ {
+-  "name": "meanjs",
+-  "description": "Fullstack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
+-  "homepage": "http://meanjs.org/",
++  "name": "firstmean",
++  "description": "MeanJS and AdminLTE GUI.",
++  "homepage": "https://github.com/CyberAirVN/MeanJSExample",
+   "license": "MIT",
+   "dependencies": {
+     "angular": "~1.5.0",

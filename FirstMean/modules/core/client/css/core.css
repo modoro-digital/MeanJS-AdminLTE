@@ -38,3 +38,8 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

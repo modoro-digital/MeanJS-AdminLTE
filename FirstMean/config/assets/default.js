@@ -30,7 +30,7 @@ module.exports = {
         'public/lib/angular/angular.js',
         'public/lib/ckeditor/ckeditor.js',
         'public/lib/angular-animate/angular-animate.js',
-        'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+        'public/lib/AdminLTE/bootstrap/js/bootstrap.min.js',
         'public/lib/ng-file-upload/ng-file-upload.js',
         'public/lib/angular-messages/angular-messages.js',
         'public/lib/angular-mocks/angular-mocks.js',

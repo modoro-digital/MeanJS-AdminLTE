@@ -18,25 +18,25 @@
     vm.options = {
       height: 310,
       language: 'en',
-      extraPlugins: 'colorbutton,colordialog',
+      extraPlugins: 'colorbutton,colordialog,image2',
+      filebrowserUploadUrl: '/api/users/upload',
       toolbarGroups: [
-        { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-        { name: 'clipboard', groups: [ 'undo', 'clipboard' ] },
-        { name: 'styles', groups: [ 'styles' ] },
-        { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-        { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-        { name: 'links', groups: [ 'links' ] },
-        { name: 'insert', groups: [ 'insert' ] },
-        { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
-        { name: 'forms', groups: [ 'forms' ] },
-        { name: 'tools', groups: [ 'tools' ] },
-        { name: 'others', groups: [ 'others' ] },
-        { name: 'colors', groups: [ 'colors' ] }
+        { name: 'document', groups: ['mode', 'document', 'doctools'] },
+        { name: 'clipboard', groups: ['undo', 'clipboard'] },
+        { name: 'styles', groups: ['styles'] },
+        { name: 'basicstyles', groups: ['basicstyles', 'cleanup'] },
+        { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph'] },
+        { name: 'links', groups: ['links'] },
+        { name: 'insert', groups: ['insert'] },
+        { name: 'editing', groups: ['find', 'selection', 'spellchecker', 'editing'] },
+        { name: 'forms', groups: ['forms'] },
+        { name: 'tools', groups: ['tools'] },
+        { name: 'others', groups: ['others'] },
+        { name: 'colors', groups: ['colors'] }
       ],
       removeButtons: 'Underline,Subscript,Superscript,Cut,Copy,Paste,PasteText,PasteFromWord,About,Outdent,Indent,Source'
     };
-    vm.content = $window.CKEDITOR.replace('editor1', vm.options);
-    
+    vm.content = $window.CKEDITOR.replace('editor2', vm.options);
     // Remove existing Article
     function close() {
       vm.content.destroy();
@@ -51,7 +51,6 @@
       }
 
       vm.article.content = vm.content.getData();
-      console.log(vm.article.content)
       // Create a new article, or update the current instance
       vm.article.createOrUpdate()
         .then(successCallback)

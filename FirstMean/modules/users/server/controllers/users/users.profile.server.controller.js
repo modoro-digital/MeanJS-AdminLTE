@@ -50,7 +50,36 @@ exports.update = function (req, res) {
     });
   }
 };
-
+/**
+ *upload image
+ */
+exports.uploadImageCkeditor = function (req, res) {
+  // Filtering to upload only images
+  var multerConfig = config.uploads.profile.image;
+  multerConfig.fileFilter = require(path.resolve('./config/lib/multer')).imageFileFilter;
+  var upload = multer(multerConfig).single('upload');
+  uploadImage()
+    .then(function () {
+      res.render(path.resolve('modules/users/server/templates/ckeditor-upload'), {
+        funcName: req.query.CKEditorFuncNum,
+        url: '/modules/users/client/img/profile/uploads/' + req.file.filename
+      });
+    })
+    .catch(function (err) {
+      res.status(422).send(err);
+    });
+  function uploadImage () {
+    return new Promise(function (resolve, reject) {
+      upload(req, res, function (uploadError) {
+        if (uploadError) {
+          reject(errorHandler.getErrorMessage(uploadError));
+        } else {
+          resolve();
+        }
+      });
+    });
+  }
+};
 /**
  * Update profile picture
  */

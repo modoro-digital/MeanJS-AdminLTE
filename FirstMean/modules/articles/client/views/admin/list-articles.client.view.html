@@ -23,14 +23,19 @@
     <div class="box-body">
       <div class="list-group">
         <a data-ng-repeat="article in vm.articles" data-ui-sref="admin.articles.edit({articleId: article._id})" class="list-group-item">
-          <small class="list-group-item-text">
-            Posted on
-            <span data-ng-bind="article.created | date:'mediumDate'"></span>
-            by
-            <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-            <span ng-if="!article.user">Deleted User</span>
-          </small>
-          <h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+          <div style="display: inline-block;">
+            <small class="list-group-item-text">
+              Posted on
+              <span data-ng-bind="article.created | date:'mediumDate'"></span>
+              by
+              <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+              <span ng-if="!article.user">Deleted User</span>
+            </small>
+            <h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+          </div>
+          <button type="button" class="btn btn-default btn-sm" style="float: right;">
+            <i class="glyphicon glyphicon-trash"></i>
+          </button>
         </a>
       </div>
       <div class="alert alert-warning text-center" data-ng-if="articles.$resolved && !articles.length">

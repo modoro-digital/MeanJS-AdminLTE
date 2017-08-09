@@ -30,7 +30,7 @@
           } else {
             // Record previous state
             storePreviousState(toState, toParams);
-            window.location.href =  $state.href('authentication.signin');
+            window.location.href = $state.href('authentication.signin');
           }
         }
       }

@@ -13,14 +13,12 @@
     vm.inline = false;
     vm.x = {};
     vm.html = '';
-    vm.article = article;
+    vm.article = Object.create(article);
+    vm.title = vm.article.title;
     vm.authentication = Authentication;
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
-    vm.deliberatelyTrustDangerousSnippet = function() {
-      return $sce.trustAsHtml(vm.article.content);
-    };
     vm.options = {
       language: 'en',
       height: 310,
@@ -42,8 +40,13 @@
       ],
       removeButtons: 'Underline,Subscript,Superscript,Cut,Copy,Paste,PasteText,PasteFromWord,About,Outdent,Indent,Source'
     };
+    vm.deliberatelyTrustDangerousSnippet = function() {
+      return $sce.trustAsHtml(vm.article.content);
+    };
     vm.editor = function () {
       vm.inline = true;
+      vm.article.title = vm.title;
+      vm.title = 'Edit article';
       vm.x = $window.CKEDITOR.replace('editor1', vm.options);
       vm.html = vm.x.getData();
     };
@@ -55,6 +58,7 @@
       });
       vm.html = '';
       vm.inline = false;
+      vm.title = article.title;
     };
     // Remove existing Article
     function remove() {

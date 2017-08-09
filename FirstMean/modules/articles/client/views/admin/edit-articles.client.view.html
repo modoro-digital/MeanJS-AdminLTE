@@ -12,7 +12,7 @@
 <section class="content">
   <div class="box box-success">
     <div class="box-header with-border">
-      <h3 class="box-title">{{vm.article._id ? vm.article.title : 'New Article'}}</h3>
+      <h3 class="box-title" ng-bind="vm.title"></h3>
       <div class="pull-right box-tools" ng-if="!vm.inline">
         <button type="button" ng-if="vm.article._id" class="btn btn-primary btn-sm" title="Remove" ng-click="vm.editor()">
           <i class="glyphicon glyphicon-pencil"></i>
@@ -23,6 +23,7 @@
       </div>
     </div>
     <div class="box-body">
+      <input ng-if="vm.inline" name="title" type="text" ng-model="vm.article.title" id="title" class="form-control" placeholder="Title" required autofocus style="margin-bottom: 20px">
       <div id="editor1" contenteditable="{{vm.inline}}" style="padding: 20px" 
       ng-bind-html="vm.deliberatelyTrustDangerousSnippet()">
       </div>

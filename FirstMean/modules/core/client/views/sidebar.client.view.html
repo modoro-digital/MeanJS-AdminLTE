@@ -13,7 +13,7 @@
   <!-- search form -->
   <form action="#" method="get" class="sidebar-form">
     <div class="input-group">
-      <input type="text" name="q" class="form-control" placeholder="Search...">
+      <input type="text" name="q" class="form-control" translate-attr="{ placeholder: 'Search' }">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
@@ -24,18 +24,18 @@
   <!-- sidebar menu: : style can be found in sidebar.less -->
   <ul class="sidebar-menu">
 
-    <li class="header">MANAGEMENT</li>
+    <li class="header" translate="Management"></li>
     <li ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-if="item.shouldRender(vm.authentication.user);"  ui-sref-active="active" class="{{item.class}} treeview">
       <a href="#" >
         <i ng-class="item.icon || 'fa-circle-o' " class="fa"></i>
-        <span ng-bind="item.title"></span>
+        <span translate="{{item.title}}"></span>
         <span class="pull-right-container" ng-if="item.items.length>0">
           <i class="fa fa-angle-left pull-right"></i>
         </span>
       </a>
       <ul class="treeview-menu" ng-if="item.items.length>0">
         <li ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(vm.authentication.user);">
-          <a ui-sref="{{subitem.state}}({{subitem.params}})" ><i class="fa fa-circle-o"></i> <span ng-bind="subitem.title"></span></a>
+          <a ui-sref="{{subitem.state}}({{subitem.params}})" ><i class="fa fa-circle-o"></i> <span translate="{{subitem.title}}"></span></a>
         </li>
       </ul>
     </li>

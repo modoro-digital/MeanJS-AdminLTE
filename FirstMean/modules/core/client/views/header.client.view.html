@@ -225,7 +225,7 @@
             <li class="user-body">
               <ul class="list-group">
                 <li ng-repeat="item in vm.accountMenu.items | orderBy: 'position'"  ui-sref-active="active" class="{{item.class}} list-group-item">
-                  <a ui-sref="{{item.state}}({{item.params}})" ng-bind="item.title">
+                  <a ui-sref="{{item.state}}({{item.params}})" translate="{{ item.title }}">
                   </a>
                 </li>
               </ul>
@@ -233,10 +233,10 @@
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">
-                <a ui-sref="settings.profile" class="btn btn-default btn-flat">Profile</a>
+                <a ui-sref="settings.profile" class="btn btn-default btn-flat" translate="Profile"></a>
               </div>
               <div class="pull-right">
-                <a ng-click="vm.signOut()" class="btn btn-default btn-flat">Sign out</a>
+                <a ng-click="vm.signOut()" class="btn btn-default btn-flat" translate="ButtonSignOut"></a>
               </div>
             </li>
           </ul>

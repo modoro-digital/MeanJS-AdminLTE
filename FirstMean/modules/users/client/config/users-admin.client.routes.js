@@ -16,7 +16,7 @@
         controller: 'UserListController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Users List'
+          pageTitle: 'ListUsers'
         }
       })
       .state('admin.user', {
@@ -28,7 +28,7 @@
           userResolve: getUser
         },
         data: {
-          pageTitle: 'Edit {{ userResolve.displayName }}'
+          pageTitle: '{{ userResolve.displayName }}'
         }
       })
       .state('admin.user-edit', {
@@ -40,7 +40,7 @@
           userResolve: getUser
         },
         data: {
-          pageTitle: 'Edit User {{ userResolve.displayName }}'
+          pageTitle: '{{ userResolve.displayName }}'
         }
       });
 

@@ -1,3 +1,9 @@
+img {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 .undecorated-link:hover {
   text-decoration: none;
 }

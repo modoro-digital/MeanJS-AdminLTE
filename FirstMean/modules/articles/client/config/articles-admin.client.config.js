@@ -10,7 +10,7 @@
 
   function menuConfig(Menus) {
     Menus.addSubMenuItem('sidebar', 'admin', {
-      title: 'Manage Articles',
+      title: 'ManageArticles',
       state: 'admin.articles.list'
     });
   }

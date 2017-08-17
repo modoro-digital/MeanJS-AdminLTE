@@ -5,9 +5,9 @@
     .module('users')
     .controller('EditProfileController', EditProfileController);
 
-  EditProfileController.$inject = ['$scope', '$http', '$location', 'UsersService', 'Authentication', 'Notification'];
+  EditProfileController.$inject = ['$scope', '$http', '$location', 'UsersService', 'Authentication', 'Notification', '$translate'];
 
-  function EditProfileController($scope, $http, $location, UsersService, Authentication, Notification) {
+  function EditProfileController($scope, $http, $location, UsersService, Authentication, Notification, $translate) {
     var vm = this;
 
     vm.user = Authentication.user;
@@ -29,6 +29,17 @@
 
         Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Edit profile successful!' });
         Authentication.user = response;
+        switch (response.language) {
+          case 'Viet Nam':
+            $translate.use('vn');
+            break;
+          case 'English':
+            $translate.use('en');
+            break;
+          default:
+            $translate.use('en');
+            break;
+        }
       }, function (response) {
         Notification.error({ message: response.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Edit profile failed!' });
       });

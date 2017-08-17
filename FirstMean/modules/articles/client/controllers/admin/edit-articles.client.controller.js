@@ -20,7 +20,7 @@
     vm.remove = remove;
     vm.save = save;
     vm.options = {
-      language: 'en',
+      language: selectLanguage(Authentication.user.language),
       height: 310,
       extraPlugins: 'colorbutton,colordialog,image2',
       filebrowserUploadUrl: '/api/users/upload',
@@ -87,6 +87,17 @@
 
       function errorCallback(res) {
         Notification.error({ message: res.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Article save error!' });
+      }
+    }
+    // select language
+    function selectLanguage(language) {
+      switch (language) {
+        case 'Viet Nam':
+          return 'vi';
+        case 'English':
+          return 'en';
+        default:
+          return 'en';
       }
     }
   }

@@ -17,7 +17,7 @@
     vm.save = save;
     vm.options = {
       height: 310,
-      language: 'en',
+      language: selectLanguage(Authentication.user.language),
       extraPlugins: 'colorbutton,colordialog,image2',
       filebrowserUploadUrl: '/api/users/upload',
       toolbarGroups: [
@@ -63,6 +63,17 @@
 
       function errorCallback(res) {
         Notification.error({ message: res.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Article save error!' });
+      }
+    }
+    // select language
+    function selectLanguage(language) {
+      switch (language) {
+        case 'Viet Nam':
+          return 'vi';
+        case 'English':
+          return 'en';
+        default:
+          return 'en';
       }
     }
   }

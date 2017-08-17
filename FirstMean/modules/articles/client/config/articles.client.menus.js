@@ -17,7 +17,7 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('sidebar', 'articles', {
-      title: 'List Articles',
+      title: 'ListArticles',
       state: 'articles.list',
       roles: ['*']
     });

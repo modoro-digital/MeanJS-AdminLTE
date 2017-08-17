@@ -36,7 +36,7 @@
         controller: 'ChangePasswordController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings password'
+          pageTitle: 'SettingsPassword'
         }
       })
       .state('settings.accounts', {
@@ -45,7 +45,7 @@
         controller: 'SocialAccountsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings accounts'
+          pageTitle: 'SettingsAccounts'
         }
       })
       .state('settings.picture', {
@@ -54,7 +54,7 @@
         controller: 'ChangeProfilePictureController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings picture'
+          pageTitle: 'SettingsPicture'
         }
       })
       .state('authentication', {
@@ -93,7 +93,7 @@
         controller: 'PasswordController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Password forgot'
+          pageTitle: 'PasswordForgot'
         }
       })
       .state('password.reset', {
@@ -105,14 +105,14 @@
         url: '/invalid',
         templateUrl: '/modules/users/client/views/password/reset-password-invalid.client.view.html',
         data: {
-          pageTitle: 'Password reset invalid'
+          pageTitle: 'ResetPassword'
         }
       })
       .state('password.reset.success', {
         url: '/success',
         templateUrl: '/modules/users/client/views/password/reset-password-success.client.view.html',
         data: {
-          pageTitle: 'Password reset success'
+          pageTitle: 'ResetPassword'
         }
       })
       .state('password.reset.form', {
@@ -121,7 +121,7 @@
         controller: 'PasswordController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Password reset form'
+          pageTitle: 'ResetPassword'
         }
       });
   }

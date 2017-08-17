@@ -124,6 +124,10 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
+  },
+  language: {
+    type: String,
+    default: 'English'
   }
 });
 

@@ -13,7 +13,7 @@ var _ = require('lodash'),
   User = mongoose.model('User'),
   validator = require('validator');
 
-var whitelistedFields = ['firstName', 'lastName', 'email', 'username'];
+var whitelistedFields = ['firstName', 'lastName', 'email', 'username', 'language'];
 
 /**
  * Update user details
@@ -21,14 +21,13 @@ var whitelistedFields = ['firstName', 'lastName', 'email', 'username'];
 exports.update = function (req, res) {
   // Init Variables
   var user = req.user;
-
   if (user) {
     // Update whitelisted fields only
     user = _.extend(user, _.pick(req.body, whitelistedFields));
 
     user.updated = Date.now();
     user.displayName = user.firstName + ' ' + user.lastName;
-
+    
     user.save(function (err) {
       if (err) {
         return res.status(422).send({

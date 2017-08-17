@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Profile
-    <small>Update your information</small>
+    {{ 'Profile' | translate }}
+    <small>{{ 'UpdateYourInformation' | translate}}</small>
   </h1>
   <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Profile</li>
+    <li><a href="#"><i class="fa fa-dashboard"></i>{{ 'Home' | translate }}</a></li>
+    <li class="active">{{ 'Profile' | translate }}</li>
   </ol>
 </section>
 
@@ -16,16 +16,16 @@
       <div class="nav-tabs-custom">
         <ul class="nav nav-tabs">
           <li ui-sref-active="active">
-            <a ui-sref="settings.profile">Edit Profile</a>
+            <a ui-sref="settings.profile">{{ 'EditProfile' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="settings.picture">Change Profile Picture</a>
+            <a ui-sref="settings.picture">{{ 'ChangeProfilePicture' | translate }}</a>
           </li>
           <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
-            <a ui-sref="settings.password">Change Password</a>
+            <a ui-sref="settings.password">{{ 'ChangePassword' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="settings.accounts">Manage Social Accounts</a>
+            <a ui-sref="settings.accounts">{{ 'ManageSocialAccounts' | translate }}</a>
           </li>
         </ul>
         <div class="tab-content settings-view">

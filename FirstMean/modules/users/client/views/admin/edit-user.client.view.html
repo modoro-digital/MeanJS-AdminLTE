@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Users
-    <small>Edit Users</small>
+    {{ 'Users' | translate }}
+    <small>{{ 'EditUsers' | translate }}</small>
   </h1>
   <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Users</li>
+    <li><a href="#"><i class="fa fa-dashboard"></i>{{ 'Home' | translate }}</a></li>
+    <li class="active">{{ 'Users' | translate }}</li>
   </ol>
 </section>
 
@@ -19,25 +19,25 @@
       <form name="vm.userForm" ng-submit="vm.update(vm.userForm.$valid)" novalidate>
         <fieldset>
           <div class="form-group" show-errors>
-            <label for="firstName">First Name</label>
+            <label for="firstName">{{ 'FirstName' | translate }}</label>
             <input type="text" id="firstName" name="firstName" class="form-control" ng-model="vm.user.firstName" placeholder="First Name" required autofocus />
             <div ng-messages="vm.userForm.firstName.$error" role="alert">
-              <p class="help-block error-text" ng-message="required">First name is required.</p>
+              <p class="help-block error-text" ng-message="required">{{ 'FirstNameErrorRequire' | translate }}</p>
             </div>
           </div>
           <div class="form-group" show-errors>
-            <label for="lastName">Last Name</label>
+            <label for="lastName">{{ 'LastName' | translate }}</label>
             <input type="text" id="lastName" name="lastName" class="form-control" ng-model="vm.user.lastName" placeholder="Last Name" required />
             <div ng-messages="vm.userForm.lastName.$error" role="alert">
-              <p class="help-block error-text" ng-message="required">Last name is required.</p>
+              <p class="help-block error-text" ng-message="required">{{ 'LastNameErrorRequire' | translate }}</p>
             </div>
           </div>
           <div class="form-group" show-errors>
-            <label class="control-label" for="roles">Roles</label>
+            <label class="control-label" for="roles">{{ 'Roles' | translate }}</label>
             <div class="controls">
               <input class="form-control" type="text" name="roles" ng-model="vm.user.roles" id="roles" ng-list required />
               <div ng-messages="vm.userForm.roles.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">At least one role is required.</p>
+                <p class="help-block error-text" ng-message="required">{{ 'RoleRequired' | translate }}</p>
               </div>
             </div>
           </div>

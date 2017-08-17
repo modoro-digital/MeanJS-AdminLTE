@@ -10,9 +10,9 @@
     .module(app.applicationModuleName)
     .config(bootstrapConfig);
 
-  bootstrapConfig.$inject = ['$compileProvider', '$locationProvider', '$httpProvider', '$logProvider'];
+  bootstrapConfig.$inject = ['$compileProvider', '$locationProvider', '$httpProvider', '$logProvider', '$translateProvider'];
 
-  function bootstrapConfig($compileProvider, $locationProvider, $httpProvider, $logProvider) {
+  function bootstrapConfig($compileProvider, $locationProvider, $httpProvider, $logProvider, $translateProvider) {
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
@@ -24,6 +24,32 @@
     // @link https://docs.angularjs.org/guide/production
     $compileProvider.debugInfoEnabled(app.applicationEnvironment !== 'production');
     $logProvider.debugEnabled(app.applicationEnvironment !== 'production');
+    // $translateProvider.translations('en', {
+    //   language: 'english'
+    // });
+    // $translateProvider.translations('vn', {
+    //   language: 'vietnam'
+    // });
+    $translateProvider.useStaticFilesLoader({
+      prefix: '/languages/',
+      suffix: '.json'
+    });
+    if (window.user) {
+      switch (window.user.language) {
+        case 'Viet Nam': 
+          $translateProvider.preferredLanguage("vn");
+          break;
+        case 'English': 
+          $translateProvider.preferredLanguage("en");
+          break;
+        default:
+          $translateProvider.preferredLanguage("en");
+          break;
+      }
+    } else {
+      $translateProvider.preferredLanguage("en");
+    }
+    $translateProvider.useSanitizeValueStrategy('escape');
   }
 
   // Then define the init function for starting up the application

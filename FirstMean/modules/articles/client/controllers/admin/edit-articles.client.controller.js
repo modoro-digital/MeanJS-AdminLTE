@@ -38,6 +38,7 @@
         { name: 'others', groups: ['others'] },
         { name: 'colors', groups: ['colors'] }
       ],
+      contentsCss: ['/modules/core/client/css/core.css'],
       removeButtons: 'Underline,Subscript,Superscript,Cut,Copy,Paste,PasteText,PasteFromWord,About,Outdent,Indent,Source'
     };
     vm.deliberatelyTrustDangerousSnippet = function() {

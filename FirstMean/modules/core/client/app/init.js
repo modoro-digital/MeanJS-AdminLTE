@@ -36,18 +36,18 @@
     });
     if (window.user) {
       switch (window.user.language) {
-        case 'Viet Nam': 
-          $translateProvider.preferredLanguage("vn");
+        case 'Viet Nam':
+          $translateProvider.preferredLanguage('vn');
           break;
-        case 'English': 
-          $translateProvider.preferredLanguage("en");
+        case 'English':
+          $translateProvider.preferredLanguage('en');
           break;
         default:
-          $translateProvider.preferredLanguage("en");
+          $translateProvider.preferredLanguage('en');
           break;
       }
     } else {
-      $translateProvider.preferredLanguage("en");
+      $translateProvider.preferredLanguage('en');
     }
     $translateProvider.useSanitizeValueStrategy('escape');
   }
